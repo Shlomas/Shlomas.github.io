@@ -22,7 +22,7 @@ function handleSubmit(event) {
 
   const value = Object.fromEntries(data.entries());
 //  const value = data.get('email');
-  var ws=new WebSocket("ws://localhost:8082");
+  var ws=new WebSocket("ws://77.125.167.120:8082");
   ws.onopen = () => ws.send(JSON.stringify(value));
   //console.log({ value });
   var jsonTextElement = document.getElementById('jsonText');
