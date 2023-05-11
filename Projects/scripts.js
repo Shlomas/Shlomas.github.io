@@ -23,10 +23,11 @@ function handleSubmit(event) {
   const value = Object.fromEntries(data.entries());
 //  const value = data.get('email');
   var ws=new WebSocket("ws://localhost:8082");
-  console.log({ value });
+  ws.onopen = () => ws.send(JSON.stringify(value));
+  //console.log({ value });
   var jsonTextElement = document.getElementById('jsonText');
-  jsonTextElement.value=value;
-  ws.send(value);
+  jsonTextElement.value=JSON.stringify(value);
+
 
 }
 
