@@ -11,3 +11,19 @@ function closeNav() {
 function sectionToShow(i) {
   document.getElementById("main.about").style.display= "block";
 }
+
+function changeTab(evt, cityName) {
+  var i, tabcontent, tablinks,tablink;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  tablink = document.getElementById(cityName+' tab');
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  tablink.className+=" active"
+  //evt.currentTarget.className += " active";
+}
