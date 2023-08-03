@@ -118,15 +118,29 @@ color: #f1f1f1;
   /*border-left: none;*/
   height: 300px;
 }
+.tabcontent1 {
+  margin-left: 250px;
+  float: left;
+  padding: 10px 1px;
+  /*border: 1px solid #ccc;*/
+  width: 80.5%;
+  /*border-left: none;*/
+  height: 600px;
+  background-image: url('AIportal.png');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-size: 100% 100%;
+}
 </style>
 </head>
-<body onload="changeTab(event, 'About')">
+<body onload="changeTab(event, 'portal')">
 
 <div id="mySidebar" class="sidebar">
 <!--    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>-->
     <h2>Shlomai Solutions</h2>
 <!--    <a href="/Projects/DataMarketplace.html">Data Marketplace</a>-->
     <div class="tab">
+        <button id="portal tab" class="tablinks" onclick="changeTab(event, 'portal')"> Home</button>
         <button id="About tab" class="tablinks" onclick="changeTab(event, 'About')">About Me</button>
         <button id="CollaboTeam tab" class="tablinks" onclick="changeTab(event, 'CollaboTeam')">CollaboTeam</button>
 <!--        <button class="tablinks" onclick="changeTab(event, 'Tokyo')">Tokyo</button>-->
@@ -147,8 +161,9 @@ color: #f1f1f1;
 <!--        <h2>Services Section</h2>-->
 <!--    </div>-->
 </div>
-
-<div id="About" class="tabcontent">
+<div id="portal" class="tabcontent1" >
+</div>
+<div id="About" class="tabcontent" >
     <h1>Shai Shlomai</h1>
     <img src="profile pic.jpg" alt="Shai" style="width:300px;height:332px;">
 <!--    <img src="profile pic.jpg" alt="Shai" style="width:3840px;height:3644px;">-->
